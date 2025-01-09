@@ -9,10 +9,9 @@ dotenv.load_dotenv()
 bidcnt = 1
 svrno = os.getenv("server_no")
 mainver = "bt241117001"
-conkey = os.getenv("key1")
-seckey = os.getenv("key2")
+conkey = os.getenv("key3")
+seckey = os.getenv("key4")
 
 
 bithumb = Bithumb(conkey, seckey)
-for coin in Bithumb.get_tickers():
-    print(coin, bithumb.get_balance(coin))
+print(bithumb.get_balance("BTC"))
